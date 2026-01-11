@@ -1,0 +1,155 @@
+/* --- Stile generico --- */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- SPLASH --- */
+#splash {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 5px solid #111;
+    border-top: 5px solid lime;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.progress-container {
+    width: 80%;
+    height: 10px;
+    background: #111;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: lime;
+    animation: load 3s forwards;
+}
+
+@keyframes load {
+    to { width: 100%; }
+}
+
+/* --- TRACKER --- */
+header h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    color: lime;
+}
+
+.crypto-container {
+    padding: 0 20px 20px 20px;
+}
+
+#crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+}
+
+#crypto-table th, #crypto-table td {
+    padding: 12px;
+    border-bottom: 1px solid #222;
+}
+
+#crypto-table th {
+    background: #111;
+    color: lime;
+}
+
+#crypto-table tr:hover {
+    background: #222;
+}
+
+/* --- Logo + nome --- */
+.logo-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Prezzo animato --- */
+.price-cell.price-up {
+    color: lime;
+    animation: blink 0.3s;
+}
+
+.price-cell.price-down {
+    color: red;
+    animation: blink 0.3s;
+}
+
+@keyframes blink {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- Freccette trend --- */
+.change-cell {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.change-cell .arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.change-cell .arrow.up {
+    color: lime;
+    transform: translateY(0);
+}
+
+.change-cell .arrow.down {
+    color: red;
+    transform: translateY(0);
+}
+
+.change-cell .arrow.animate {
+    transform: translateY(-5px);
+}
+
+/* --- SEARCH BAR --- */
+#crypto-search {
+    display: block;
+    width: 300px;
+    margin: 10px auto 20px auto;
+    padding: 10px;
+    border: 2px solid lime;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+}

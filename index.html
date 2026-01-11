@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Injective Protocol - Tracker</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splash">
+    <h1>INJECTICE PROTOCOL</h1>
+    <div class="loader"></div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+</div>
+
+<!-- TRACKER -->
+<div id="tracker">
+    <header>
+        <h1>MERCATI</h1>
+    </header>
+    <main>
+        <input type="text" id="crypto-search" placeholder="🔍 Cerca crypto per nome o ticker...">
+        <div class="crypto-container">
+            <table id="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Simbolo</th>
+                        <th>Prezzo (USD)</th>
+                        <th>Variazione 24h</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+<script src="tracker.js"></script>
+</body>
+</html>
